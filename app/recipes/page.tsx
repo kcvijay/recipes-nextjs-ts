@@ -1,8 +1,6 @@
 import React, { Suspense } from 'react';
-import Home, { HomepageHeader } from '../page';
 import RecipeWrapper from './RecipeWrapper';
 import Loader from '@/UI/Loader';
-import Link from 'next/link';
 
 function page() {
   return (
