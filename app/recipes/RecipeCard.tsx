@@ -9,11 +9,11 @@ import Link from 'next/link';
 function RecipeCard(props: Recipe) {
   return (
     <Link
-      className='border border-orange-500 rounded-md hover:scale-105 transition-all max-w-full w-[40rem] overflow-hidden'
+      className='border border-orange-500 rounded-md hover:outline hover:outline-orange-500 outline-offset-2 focus:outline-4 focus:outline-orange-500 focus:outline-offset-2 max-w-full w-[40rem] overflow-hidden'
       href={`/recipes/${props.id}`}
     >
       <div>
-        <Image
+        <Image  
           className='w-full h-[16rem] object-cover'
           src={props.image}
           alt={props.name}
@@ -25,8 +25,8 @@ function RecipeCard(props: Recipe) {
           <div className='flex items-center gap-1 justify-between mb-4'>
             <h2 className='text-lg overflow-ellipsis'>{props.name}</h2>
 
-            <div className='flex justify-end items-center text-[12px] text-orange-500'>
-              <StarRate/>
+            <div className='min-w-[80px] flex justify-end items-center gap-1 text-[12px] text-orange-500'>
+              <StarRate className='w-5'/>
               <span>
                 {props.rating} ({props.reviewCount})
               </span>
@@ -55,12 +55,5 @@ function RecipeCard(props: Recipe) {
   );
 }
 
-function trimTitle(title: string) {
-  return title.length > 20 ? title.slice(0, 20) + '...' : title;
-}
-
-function trimCuisine(cuisine: string) {
-  return cuisine.length > 10 ? cuisine.slice(0, 8) + '...' : cuisine;
-}
 
 export default RecipeCard;

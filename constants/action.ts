@@ -1,5 +1,5 @@
 export async function getAllRecipies() {
-  const res = await fetch('https://dummyjson.com/recipes?limit=0&skip=0');
+  const res = await fetch('https://dummyjson.com/recipes?limit=30&skip=0');
   const data = await res.json();
   return data;
 }
