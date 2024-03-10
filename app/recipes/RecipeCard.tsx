@@ -13,7 +13,7 @@ function RecipeCard(props: Recipe) {
       href={`/recipes/${props.id}`}
     >
       <div>
-        <Image  
+        <Image
           className='w-full h-[16rem] object-cover'
           src={props.image}
           alt={props.name}
@@ -26,7 +26,7 @@ function RecipeCard(props: Recipe) {
             <h2 className='text-lg overflow-ellipsis'>{props.name}</h2>
 
             <div className='min-w-[80px] flex justify-end items-center gap-1 text-[12px] text-orange-500'>
-              <StarRate className='w-5'/>
+              <StarRate className='w-5' />
               <span>
                 {props.rating} ({props.reviewCount})
               </span>
@@ -35,17 +35,17 @@ function RecipeCard(props: Recipe) {
 
           <div className='flex justify-between items-center gap-1 text-sm'>
             <div className='grow p-1 flex gap-1 justify-start items-center text-slate-700 border border-orange-200 bg-orange-100 rounded'>
-              <QueryBuilderIcon />
+              <QueryBuilderIcon className='w-5' />
               <span className='ml-1 overflow-ellipsis'>
                 {props.prepTimeMinutes + props.cookTimeMinutes} min
               </span>
             </div>
             <div className='grow p-1 flex gap-1 justify-start items-center text-slate-700 border border-orange-200 bg-orange-100 rounded'>
-              <SpeedIcon />
-              <span>{props.difficulty}</span>
+              <SpeedIcon className='w-5' />
+              <span className='ml-1 overflow-ellipsis'>{props.difficulty}</span>
             </div>
             <div className='grow p-1 flex gap-1 justify-start items-center text-slate-700 border border-orange-200 bg-orange-100 rounded'>
-              <FlagIcon />
+              <FlagIcon className='w-5' />
               <span className='ml-1 overflow-ellipsis'>{props.cuisine}</span>
             </div>
           </div>
@@ -54,6 +54,5 @@ function RecipeCard(props: Recipe) {
     </Link>
   );
 }
-
 
 export default RecipeCard;
