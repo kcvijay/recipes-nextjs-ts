@@ -3,9 +3,9 @@ import React from 'react';
 
 function page() {
   return (
-    <main className='grow bg-orange-50'>
+    <main className='grow bg-vegetables bg-orange-50 text-lg'>
       <HomepageHeader />
-      <div className='bg-vegetables h-full max-w-[80rem] mx-auto p-4 grid grid-cols-1 md:grid-cols-2 place-content-start transition-all'>
+      <div className=' h-full max-w-[80rem] mx-auto p-4 transition-all'>
         <div />
         <div className='leading-loose'>
           <h1 className='text-xl mb-4'>
