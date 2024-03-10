@@ -3,11 +3,11 @@ import React from 'react';
 
 function page() {
   return (
-    <main className='grow bg-vegetables bg-orange-50 text-lg'>
+    <main className='grow bg-vegetables bg-orange-50'>
       <HomepageHeader />
       <div className=' h-full max-w-[80rem] mx-auto p-4 transition-all'>
         <div />
-        <div className='leading-loose'>
+        <div className='leading-loose text-lg'>
           <h1 className='text-xl mb-4'>
             Enjoy the lists of appetizing recipes.
           </h1>
